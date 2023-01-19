@@ -12,7 +12,7 @@ const Home = () => {
           <Button variant="outline-info">Add post</Button>
         </Link>
         </div>
-    <PostsTable/>
+        <PostsTable/>
   </main>
   );
 };
