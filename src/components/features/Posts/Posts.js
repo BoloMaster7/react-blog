@@ -21,7 +21,7 @@ const Posts = (props)  => {
           <Button variant="primary">Read more</Button>
           </Link>
         ))}
-        <Link key={props.postId} to={'/post/' + props.postId}>
+        <Link key={props.id} to={'/post/' + props.id}>
         <Button variant="primary">Read more</Button>
         </Link>
 
