@@ -6,6 +6,7 @@ import { Button } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { removePost } from '../../../redux/postsRedux';
 
+
 const SinglePost = ()  => {
   const { id } = useParams();
   const postsData = useSelector(state => getPostById(state, id))
@@ -18,8 +19,9 @@ const SinglePost = ()  => {
   };
 
 
+
   return (
-    <div className='col-md-'>
+    <div className='col-md-8'>
      <header className='d-flex justify-content-between mt-2 mb-2 p-2' >    
         <h2 >
           {postsData.title}

@@ -1,23 +1,25 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { getAllPosts } from '../../../redux/postsRedux';
-import Posts from '../Posts/Posts';
+import Post from '../Post/Post';
 
 
 const PostsTable = (props)  => {
   const posts = useSelector(getAllPosts);
 
   return(
-     <div className="">
+    <div className="row">
     {posts.map(post => 
-    <Posts key={post.id}
-    title={post.title}
-    description={post.shortDescription}
-    content={post.content}
-    date={post.publishedDate}
-    author={post.author}
-    />)}
-    </div>
+      <Post key={post.id}
+        title={post.title}
+        description={post.shortDescription}
+        content={post.content}
+        date={post.publishedDate}
+        author={post.author}
+        id={post.id}
+        />
+      )}
+  </div>
   );
 };
 export default PostsTable;
