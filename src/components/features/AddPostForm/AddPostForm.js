@@ -16,6 +16,7 @@ const AddPostForm=() => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    navigate("/", { replace: true })
     dispatch(
       addPost({ title, author, publishedDate, shortDescription, content })
     );
@@ -56,7 +57,7 @@ const AddPostForm=() => {
       </Form.Group>
 
 
-      <Button variant="primary" onClick={() => navigate("/", { replace: true })}>
+      <Button variant="primary" onClick={handleSubmit}>
         Add post
       </Button>
     </Form>

@@ -35,10 +35,9 @@ const SinglePost = (props)  => {
         <h2 >
           {postsData.title}
           </h2>
-          <div>
-          <Button variant="btn btn-outline-primary m-1" a href='/post/edit/id' >Edit</Button>
+          <div>         
           <Link key={props.id} to={'/post/edit/' + props.id}>
-          <Button variant="primary">Read more</Button>
+          <Button variant="btn btn-outline-primary m-1">Edit</Button>
         </Link>
           <Button variant="btn btn-outline-danger m-1" onClick={handleShow}
         >Delete</Button>

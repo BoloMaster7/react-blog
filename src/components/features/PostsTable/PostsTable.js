@@ -4,7 +4,7 @@ import { getAllPosts } from '../../../redux/postsRedux';
 import Post from '../Post/Post';
 
 
-const PostsTable = (props)  => {
+const PostsTable = ()  => {
   const posts = useSelector(getAllPosts);
 
   return(
