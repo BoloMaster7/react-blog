@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 
 const Post = (props)  => {
 
- 
+  console.log('test', props);
  return (
   <div className="py-4 col-6 col-md-4 ">
     <div className="card">
@@ -16,7 +16,6 @@ const Post = (props)  => {
         <Link key={props.id} to={'/post/' + props.id}>
           <Button variant="primary">Read more</Button>
         </Link>
-
       </div>
     </div>
   </div>
