@@ -22,10 +22,12 @@ const handleSubmit = post => {
 
 
 return (
-<PostForm action={handleSubmit} actionText="Edit post"
+<PostForm action={handleSubmit} actionText={"Edit post"}
   author= {editPostsData.author}
   published={editPostsData.published}
   shortDescription={editPostsData.shortDescription}
+
+  
  />
 );
 }
