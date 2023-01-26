@@ -1,10 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import PostEdit from '../../pages/PostEdit/PostEdit';
 import PostForm from '../PostForm/PostForm';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { getPostById } from '../../../redux/postsRedux';
+import { editPost, getPostById } from '../../../redux/postsRedux';
 
 const EditPostForm=() => {
 
@@ -16,7 +15,7 @@ const EditPostForm=() => {
 
 
 const handleSubmit = post => {
-  dispatch(PostEdit({ ...post, id }));
+  dispatch(editPost({ ...post, id }));
   navigate('/')
 };
 
