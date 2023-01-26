@@ -57,8 +57,7 @@ const SinglePost = ()  => {
           </div >
           </header>
           <p>Author: {postsData.author}</p>
-          <p>Published: {postsData.publishedDate}</p>
-         
+          <p>Published: {postsData.publishedDate}</p>        
          <p dangerouslySetInnerHTML={{ __html: postsData.content }} />
     </div>
   );
