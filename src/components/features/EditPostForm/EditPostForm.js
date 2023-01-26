@@ -4,6 +4,7 @@ import PostForm from '../PostForm/PostForm';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { editPost, getPostById } from '../../../redux/postsRedux';
+import { Navigate } from 'react-router-dom';
 
 const EditPostForm=() => {
 
@@ -19,7 +20,8 @@ const handleSubmit = post => {
   navigate('/')
 };
 
-
+if(!editPostsData) return <Navigate to="/" />
+else 
 return (
 <PostForm action={handleSubmit} actionText={"Edit post"}
   author= {editPostsData.author}
