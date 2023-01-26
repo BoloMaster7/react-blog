@@ -20,38 +20,38 @@ import { Button } from 'react-bootstrap';
         <Form onSubmit={handleSubmit}>
       <Form.Group className="mb-3" >
         <Form.Label>Title</Form.Label>
-        <Form.Control type="text" placeholder="Title"
+        <Form.Control type="text" placeholder="Title" value={title}
          onChange={(e) => setTitle(e.target.value)} />
        
       </Form.Group>
 
       <Form.Group className="mb-3" >
         <Form.Label>Author</Form.Label>
-        <Form.Control type="text" placeholder="Author" 
+        <Form.Control type="text" placeholder="Author" value={author}
         onChange={(e) => setAuthor(e.target.value)}/>
       </Form.Group>
      
       <Form.Group className="mb-3" >
         <Form.Label>Published</Form.Label>
-        <Form.Control type="text" placeholder="Published" 
+        <Form.Control type="text" placeholder="Published" value={publishedDate}
         onChange={(e) => setPublishedDate(e.target.value)}/>
       </Form.Group>
 
       <Form.Group className="mb-3" >
         <Form.Label>shortDescription</Form.Label>
-        <Form.Control type="text" placeholder="Leave a comment here" 
+        <Form.Control type="text" placeholder="Leave a comment here" value ={shortDescription}
         onChange={(e) => setShortDescription(e.target.value)}/>
       </Form.Group>
 
       <Form.Group className="mb-3" >
         <Form.Label>Main content</Form.Label>
-        <Form.Control type="text" placeholder="Leave a comment here" 
+        <Form.Control type="text" placeholder="Leave a comment here"  value={content}
         onChange={(e) => setContent(e.target.value)}/>
       </Form.Group>
 
 
       <Button variant="primary" onClick={handleSubmit}>
-        Add post
+        {actionText}
       </Button>
     </Form>
     </>

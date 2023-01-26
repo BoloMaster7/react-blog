@@ -24,10 +24,10 @@ const handleSubmit = post => {
 return (
 <PostForm action={handleSubmit} actionText={"Edit post"}
   author= {editPostsData.author}
-  published={editPostsData.published}
+  publishedDate={editPostsData.publishedDate}
   shortDescription={editPostsData.shortDescription}
-
-  
+  title={editPostsData.title}
+  content={editPostsData.content}
  />
 );
 }
