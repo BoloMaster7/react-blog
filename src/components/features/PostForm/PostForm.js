@@ -1,7 +1,10 @@
 import { Form } from "react-bootstrap";
 import { useState } from "react";
 import { Button } from 'react-bootstrap';
- 
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
+
+
   const PostForm = ({ action, actionText, ...props }) => {
     const [title, setTitle] = useState(props.title || '');
     const [author, setAuthor] = useState(props.author || '');
@@ -43,12 +46,8 @@ import { Button } from 'react-bootstrap';
         onChange={(e) => setShortDescription(e.target.value)}/>
       </Form.Group>
 
-      <Form.Group className="mb-3" >
-        <Form.Label>Main content</Form.Label>
-        <Form.Control type="text" placeholder="Leave a comment here"  value={content}
-        onChange={(e) => setContent(e.target.value)}/>
-      </Form.Group>
-
+      
+      <ReactQuill value={content} onChange={setContent} />
 
       <Button variant="primary" onClick={handleSubmit}>
         {actionText}

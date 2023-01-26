@@ -58,7 +58,8 @@ const SinglePost = ()  => {
           </header>
           <p>Author: {postsData.author}</p>
           <p>Published: {postsData.publishedDate}</p>
-          <p >{postsData.shortDescription}</p> 
+         
+         <p dangerouslySetInnerHTML={{ __html: postsData.content }} />
     </div>
   );
 };
