@@ -15,6 +15,7 @@ const PostsTable = ()  => {
         description={post.shortDescription}
         content={post.content}
         date={post.publishedDate}
+        category={post.category}
         author={post.author}
         id={post.id}
         />

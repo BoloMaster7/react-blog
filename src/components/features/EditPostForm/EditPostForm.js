@@ -28,6 +28,7 @@ return (
 <PostForm action={handleSubmit} actionText={"Edit post"}
   author= {editPostsData.author}
   publishedDate={editPostsData.publishedDate}
+  category = {editPostsData.category}
   shortDescription={editPostsData.shortDescription}
   title={editPostsData.title}
   content={editPostsData.content}

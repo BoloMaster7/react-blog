@@ -58,7 +58,8 @@ const SinglePost = ()  => {
           </div >
           </header>
           <p>Author: {postsData.author}</p>
-          <p>Published: {dateToStr(postsData.publishedDate)}</p>        
+          <p>Published: {dateToStr(postsData.publishedDate)}</p>  
+          <p>Category: {postsData.category}</p>     
          <p dangerouslySetInnerHTML={{ __html: postsData.content }} />
     </div>
   );

@@ -9,6 +9,7 @@ import Header from './components/views/Header/Header';
 import Footer from './components/views/Footer/Footer';
 import AddPostForm from './components/features/AddPostForm/AddPostForm';
 import EditPostForm from './components/features/EditPostForm/EditPostForm';
+import Categories from './components/pages/Categories/Categories';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
     <Route path="/post/add" element={<AddPostForm />} />
     <Route path="/post/edit/:id" element={<EditPostForm />} />
     <Route path="/about" element={<About />} />
+    <Route path="/categories" element={<Categories />} />
     <Route path="*" element={<NotFound />} />
   </Routes>
   <Footer />
