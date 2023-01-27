@@ -10,7 +10,7 @@ const Post = (props)  => {
       <div className="card-body">
         <h5 className="card-title">{props.title}</h5>
         <p className="font-weight-bold">Author: {props.author}</p>
-      <p className="text-muted">Published: {dateToStr}</p>
+        <p className="text-muted">Published: {dateToStr(props.date)}</p>
         <p className="card-text">  Short description: {props.description}.</p>
         <Link key={props.id} to={'/post/' + props.id}>
           <Button variant="primary">Read more</Button>
