@@ -8,24 +8,29 @@ import "react-datepicker/dist/react-datepicker.css";
 import { useForm } from "react-hook-form";
 
 
+
   const PostForm = ({ action, actionText, ...props }) => {
     const [title, setTitle] = useState(props.title || '');
     const [author, setAuthor] = useState(props.author || '');
     const [publishedDate, setPublishedDate] = useState(props.publishedDate || '');
     const [shortDescription, setShortDescription] = useState(props.shortDescription || '');
+    const [category, setCategory] = useState(props.category || '');
     const [content, setContent] = useState(props.content || '');
     const { register, handleSubmit: validate, formState: { errors } } = useForm();
     const [contentError, setContentError] = useState(false);
     const [dateError, setDateError] = useState(false)
 
+    
     const handleSubmit = () => {
       setContentError(!content)
       setDateError(!publishedDate)
       if(content && publishedDate) {
-        action({ title, author, publishedDate, shortDescription, content });
+        action({ title, author, publishedDate, shortDescription, content, category });
       }
     };
-
+ 
+    
+   
   return (
     <>
         <Form onSubmit={validate(handleSubmit)}>
@@ -61,6 +66,20 @@ import { useForm } from "react-hook-form";
       {dateError && <small className="d-block form-text text-danger mt-2">
         Date can't be empty</small>}
       </Form.Group>
+
+      {/* <Form.Group className="mb-3" >
+        <Form.Label>Category</Form.Label>
+        <Form.Control/> 
+       <Form.Select defaultValue="Choose...">
+       <option>
+        {categories.map(category => 
+        category={category} )}
+      ..</option>
+     </Form.Select>
+        
+      </Form.Group> */}
+
+
 
       <Form.Group className="mb-3" >
         <Form.Label>Short Description</Form.Label>
