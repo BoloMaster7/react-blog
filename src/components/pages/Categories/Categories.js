@@ -6,18 +6,18 @@ import { Card } from 'react-bootstrap';
 
 
 const Categories = () => {
-  const categoriesList = useSelector(getAllCategories);
+  const categoriesList = useSelector(getAllCategories)
   // const categoriesList = useState(getAllCategories)
   return (
       <section>
         <h1 className="mb-5 justify-content-center d-flex">Categories</h1>
-        {/* <Card>
+        <Card>
         {categoriesList.map(category => 
     
         <li>Category: {category}</li>
         
         )}
-        </Card> */}
+        </Card>
 
 
       </section>
