@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { getAllCategories } from '../../../redux/categoriesRedux';
 import { useSelector } from 'react-redux';
 import { Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 
 
@@ -14,8 +15,10 @@ const Categories = () => {
         <Card>
         {categoriesList.map(category => 
     
-        <li>Category: {category}</li>
-        
+     
+        <Link to={"/categories/" + category} className="text-decoration-none">
+        {category}
+      </Link>
         )}
         </Card>
 

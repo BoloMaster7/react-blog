@@ -67,17 +67,17 @@ import { useForm } from "react-hook-form";
         Date can't be empty</small>}
       </Form.Group>
 
-      {/* <Form.Group className="mb-3" >
+      * <Form.Group className="mb-3" >
         <Form.Label>Category</Form.Label>
         <Form.Control/> 
        <Form.Select defaultValue="Choose...">
        <option>
-        {categories.map(category => 
-        category={category} )}
+        {/* {categories.map(category => 
+        category={category} )} */}
       ..</option>
      </Form.Select>
         
-      </Form.Group> */}
+      </Form.Group> 
 
 
 
