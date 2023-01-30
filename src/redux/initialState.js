@@ -7,7 +7,7 @@ const initialState = {
         content: 'Main content of the article',
         publishedDate: new Date('02-16-2022'),
         author: 'John Doe',
-        category: 'Movie'
+        category: 'Movies'
   },
   {
     id: '2',
