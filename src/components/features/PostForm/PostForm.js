@@ -70,11 +70,11 @@ import { useForm } from "react-hook-form";
        <Form.Group className="mb-3" >
         <Form.Label>Category</Form.Label>
         <Form.Control/> 
-       <Form.Select defaultValue="Choose...">
-       <option>
-        {/* {categories.map(category => 
-        category={category} )} */}
-      ..</option>
+       <Form.Select  value={category}
+      onChange={(e: any) => setCategory(e.currentTarget.value)} >
+        <option value="Movies">Movies</option>
+        <option value="News">News</option>
+        <option value="Sport">Sport</option>
      </Form.Select>
         
       </Form.Group> 
